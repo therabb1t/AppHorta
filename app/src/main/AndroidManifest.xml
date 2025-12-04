@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppHorta">
         <activity
+            android:name=".Voluntario"
+            android:exported="false" />
+        <activity
+            android:name=".Entrar"
+            android:exported="false" />
+        <activity
+            android:name=".Mapa"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
