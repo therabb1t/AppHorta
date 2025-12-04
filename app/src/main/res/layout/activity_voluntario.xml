@@ -1,10 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Voluntario">
+    android:padding="24dp"
+    android:background="@color/gray_background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/text_view_saudacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem-vindo(a) ao Painel do Voluntário(a)!"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_saudacao"
+        android:layout_above="@+id/btn_sair">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suas Próximas Atividades:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarefa: Regar as Hortas da Sessão A\nHorário: 14:00 - 16:00"
+                android:padding="16dp"
+                android:background="@drawable/rounded_background_green"
+                android:textColor="@color/white"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Próxima Tarefa: Colheita de Ervas\nData: Segunda-feira"
+                android:padding="16dp"
+                android:background="@drawable/rounded_background_purple"
+                android:textColor="@color/white"
+                android:layout_marginBottom="12dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_sair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        android:backgroundTint="@color/purple_button"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        style="?android:attr/buttonBarButtonStyle" />
+</RelativeLayout>
